@@ -8,7 +8,7 @@ The rows in the dataset represent patients and the columns represent information
 File name: medical_examination.csv
 
 Feature | Variable Type | Variable | Value Type
---- | --- | ---
+--- | --- | --- | ---
 Age | Objective Feature | `age` | int (days)
 Height | Objective Feature | `height` | int (cm)
 Weight | Objective Feature | `weight` | float (kg)
