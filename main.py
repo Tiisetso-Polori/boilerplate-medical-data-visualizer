@@ -1,10 +1,13 @@
-# This entrypoint file to be used in development. Start by reading README.md
 import medical_data_visualizer
-from unittest import main
 
-# Test your function by calling it here
-medical_data_visualizer.draw_cat_plot()
-medical_data_visualizer.draw_heat_map()
+# Load dan preprocess data
+df = medical_data_visualizer.load_data()
+df = medical_data_visualizer.preprocess_data(df)
 
-# Run unit tests automatically
-main(module='test_module', exit=False)
+# Buat dan tampilkan grafik kategori
+fig_cat = medical_data_visualizer.draw_cat_plot(df)
+fig_cat.show()
+
+# Buat dan tampilkan heatmap
+fig_heat = medical_data_visualizer.draw_heat_map(df)
+fig_heat.show()
